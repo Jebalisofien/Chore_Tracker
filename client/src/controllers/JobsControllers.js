@@ -52,7 +52,7 @@ const jobsController = create((set) => ({
         },
     updateJob: async (e) => {
         const { jobModel} = jobsController.getState();
-        const jobId = e
+        const jobId = e.jobId
         console.log(jobId);
         const res = await axios.post("/api/update", {jobId: jobId,jobModel: jobModel});
         

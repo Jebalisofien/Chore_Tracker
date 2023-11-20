@@ -28,42 +28,7 @@ export default function Job() {
             console.log(e)
         }
     }
-    const viewJob= async (e) => {
-        e.preventDefault();
-        try {   
-            navigate ("/job/" + e.target.id);
-        }
-        catch(e){
-            console.log(e)
-        }
-    }
-
     
-    const deleteJob= async (e) => {
-        e.preventDefault();
-        try
-        {
-
-            controller.deleteJob(e);
-            
-            navigate ("/");
-        }
-        catch(e){
-            console.log(e)
-        }
-    }
-    const editJob= async (e) => {
-        e.preventDefault();
-        try {
-            navigate ("/job/" + e.target.id + "/edit");
-        }
-        catch(e){
-            console.log(e)
-        }
-    }
-    console.log(controller.jobs)
-//        {jobTaker ? (<span>there is</span>) : (<span>there is none</span>)}
-
     return (
        <>
        {controller.jobs &&

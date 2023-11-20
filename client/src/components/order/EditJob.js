@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function EditJob() {
     const navigate= useNavigate();
     const controller = jobsController();
-    let { jobId } = useParams();
+    let jobId  = useParams();
 
     
         useEffect( () => {

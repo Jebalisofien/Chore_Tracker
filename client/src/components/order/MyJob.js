@@ -4,19 +4,6 @@ import { useNavigate } from "react-router-dom";
 export default function MyJob({ job }) {
     const controller = jobsController();
     const navigate= useNavigate();
-    const assignJob= async (e) => {
-        e.preventDefault();
-        try
-        {
-
-            controller.assignJob(e);
-            
-            navigate ("/");
-        }
-        catch(e){
-            console.log(e)
-        }
-    }
     const deleteMyJob= async (e) => {
         e.preventDefault();
         try
@@ -54,8 +41,6 @@ export default function MyJob({ job }) {
         <p> Tittle :{job.title}</p>
         <p>Description :{ job.description}</p>
         <p>Location :{job.location}</p>
-        <p>Location :{job.taker}</p>
-        {jobTaker ? (<span></span>) : (<span></span>)}
 
         <button className="btn btn-primary mb-2" id={job._id} onClick={viewMyJob} >View</button>
         <button className="btn btn-primary mb-2" id={job._id} onClick={deleteMyJob} >Done</button>
